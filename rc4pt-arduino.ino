@@ -61,6 +61,14 @@ void loop(){
       case FUNC_STOP:
         Serial.println("rc4pt:togglefullscreen");
         break;
+        
+      case PREVIOUS:
+        Serial.println("rc4pt:previous");
+        break;
+      
+      case NEXT:
+        Serial.println("rc4pt:next");
+        break;
       
       case BTN_2:
         Serial.println("rc4pt:up");
@@ -83,7 +91,7 @@ void loop(){
         break;
         
       case BTN_0:
-        Serial.println("rc4pt:togglefavourite");
+        Serial.println("rc4pt:showfavourites");
         break;
         
       case DOWN:
