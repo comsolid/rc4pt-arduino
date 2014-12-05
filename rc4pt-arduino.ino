@@ -1,5 +1,5 @@
 /*
- * Remote Controller for PopcornTime
+ * Remote Controller for PopcornTime using Arduino with IR remote receiver.
 */
  
 #include <IRremote.h>
@@ -40,9 +40,8 @@ void loop(){
   //decodes the infrared input
   if (irrecv.decode(&results)){
     long int decCode = results.value;
-    //Serial.println(decCode);
-   //switch case to use the selected remote control button
-   switch (results.value){
+    //switch case to use the selected remote control button
+    switch (results.value){
       case ON_OFF:
         Serial.println("rc4pt:on-off");
         break;
@@ -81,6 +80,18 @@ void loop(){
         
       case BTN_5:
         Serial.println("rc4pt:enter");
+        break;
+        
+      case BTN_0:
+        Serial.println("rc4pt:togglefavourite");
+        break;
+        
+      case DOWN:
+        Serial.println("rc4pt:previous-tab");
+        break;
+        
+      case UP:
+        Serial.println("rc4pt:next-tab");
         break;
     }
     irrecv.resume(); // Receives the next value from the button you press
