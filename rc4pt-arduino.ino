@@ -55,11 +55,11 @@ void loop(){
         break;
         
       case PLAY_PAUSE:
-        Serial.println("rc4pt:toggleplaying");
+        Serial.println("rc4pt:play-pause");
         break;
       
       case FUNC_STOP:
-        Serial.println("rc4pt:togglefullscreen");
+        Serial.println("rc4pt:func-stop");
         break;
         
       case PREVIOUS:
@@ -69,37 +69,61 @@ void loop(){
       case NEXT:
         Serial.println("rc4pt:next");
         break;
+        
+      case BTN_0:
+        Serial.println("rc4pt:btn-0");
+        break;
+      
+      case BTN_1:
+        Serial.println("rc4pt:btn-1");
+        break;
       
       case BTN_2:
-        Serial.println("rc4pt:up");
+        Serial.println("rc4pt:btn-2");
         break;
         
-      case BTN_8:
-        Serial.println("rc4pt:down");
+      case BTN_3:
+        Serial.println("rc4pt:btn-3");
         break;
         
       case BTN_4:
-        Serial.println("rc4pt:left");
-        break;
-        
-      case BTN_6:
-        Serial.println("rc4pt:right");
+        Serial.println("rc4pt:btn-4");
         break;
         
       case BTN_5:
-        Serial.println("rc4pt:enter");
+        Serial.println("rc4pt:btn-5");
         break;
         
-      case BTN_0:
-        Serial.println("rc4pt:showfavourites");
+      case BTN_6:
+        Serial.println("rc4pt:btn-6");
+        break;
+        
+      case BTN_7:
+        Serial.println("rc4pt:btn-7");
+        break;
+        
+      case BTN_8:
+        Serial.println("rc4pt:btn-8");
+        break;
+        
+      case BTN_9:
+        Serial.println("rc4pt:btn-9");
         break;
         
       case DOWN:
-        Serial.println("rc4pt:previous-tab");
+        Serial.println("rc4pt:down");
         break;
         
       case UP:
-        Serial.println("rc4pt:next-tab");
+        Serial.println("rc4pt:up");
+        break;
+        
+      case EQ:
+        Serial.println("rc4pt:eq");
+        break;
+        
+      case ST_REPT:
+        Serial.println("rc4pt:st-rept");
         break;
     }
     irrecv.resume(); // Receives the next value from the button you press
